@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Flask Intro - register page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create account</h1>
+    </br>
+      <form action="" method="post">
+        <p>Nome utente</p>  
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+        </br> <p>password</p> 
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        </br> <p> reinserisci password</p>
+          <input type="password" placeholder="Password" name="password2" value="{{
+            request.form.password2 }}"></br></br>
+        <input class="btn btn-primary" type="submit" value="Create">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
