@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Flask Intro - insert page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Inserisci Libro</h1>
+    </br>
+      <form action="" method="post">
+        <p>titolo</p>  
+        <input type="text" placeholder="title" name="title" value="{{
+          request.form.titolo }}">
+        </br> <p>autore</p> 
+         <input type="text" placeholder="author" name="author" value="{{
+          request.form.autore }}">
+        </br> <p> anno pubblicazione</p>
+          <input type="text" placeholder="year" name="year" value="{{
+            request.form.year }}"></br></br>
+        <input class="btn btn-primary" type="submit" value="Inserisci">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
