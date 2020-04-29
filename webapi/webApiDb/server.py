@@ -12,7 +12,7 @@ def __main__():
 
 
 #--------
-@app.route('/api/insertdb',methods=['GET','POST'])
+@app.route('/api/insertdb',methods=['POST'])
 def inserisci():
     error = None
     if request.method == 'POST':
