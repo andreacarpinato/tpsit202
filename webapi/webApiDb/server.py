@@ -26,7 +26,7 @@ def inserisci():
         c.execute('commit') #salva modifiche db
         c.close()
         conn.close()
-        return render_template('insert.html')
+        return render_template('homepage.html')
     else :
         return render_template('insert.html')
     
